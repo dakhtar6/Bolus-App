@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Bolus</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+
+    <h1 class="header-background">My Bolus</h1>
+
+    <nav class="navbar navbar-inverse"> <!--navbar-fixed-top -->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">The Awesomest Quote Generator</a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right nav-pull-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn" id="account-sign-in-button">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <div id="calcBox">
+      Carbohydrate Intake - grams<br>
+        <input id="CarbIntake" type="text" class ="calcInput" name="Carbohydrate Intake"><br>
+        <!-- <select><option value="Milk" data-carb="12">Milk, 8oz</option></select><br> --> 
+
+        <!--interesting "select" attribute above. experiment with-->
+
+      Carb to Insulin Ratio<br>
+        <input type="text" class ="calcInput" name="Carb to Insulin Ratio"><br>
+
+      Correction Factor / Insulin Sensitivity - mg/dl<br>
+        <input  type="text" class ="calcInput" name="Correction Factor / Insulin Sensitivity"><br>
+
+      Current Blood Glucose - mg/dl<br>
+        <input type="text" class ="calcInput" name ="Current Blood Glucose"><br>
+
+      Desired Blood Glucose - mg/dl<br>
+        <input type ="text" class ="calcInput" name ="Desired Blood Glucose"><br>
+        <button class="bolusCalcButton">Calculate</button><br>
+
+      Total Bolus = <span id="bolusCalcResult"></span> 
+
+    </div>
+    
+    <div id="foodBox">
+
+      <button id="foodBoxButton">Submit</button>
+
+    </div>
+      
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+      <script src="main.js"></script>
+
+  </body>
+</html>
